@@ -230,7 +230,7 @@ class Player : public Creature, public Cylinder
                                         //it = cSpectators.begin();
                                 }
                         }
-                        cast = PlayerCast::PlayerCast();
+                        cast = PlayerCast();
                 }
 
                 void const kickCastViewerByName(std::string n) {
@@ -247,7 +247,7 @@ class Player : public Creature, public Cylinder
                         if(!ip)
                                 return false;
 
-                        cast.bans.push_back(CastBan::CastBan(n, ip));
+                        cast.bans.push_back(CastBan(n, ip));
                         kickCastViewerByName(n);
                         return true;
                 }
